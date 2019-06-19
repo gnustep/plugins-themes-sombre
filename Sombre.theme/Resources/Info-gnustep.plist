@@ -1,0 +1,20 @@
+{
+    GSThemeAuthors = (
+	"Bertrand Dekoninck"
+    );
+    GSThemeDetails = "A dark theme with a blue accent and the Rik icons.";
+    GSThemeDomain = {
+	GSBackHandlesWindowDecorations = YES;
+	GSMenuBarHeight = 26;
+	GSMenuItemHeight = 26;
+	GSScrollerArrowsSameEnd = NO;
+	NSInterfaceStyleDefault = NSMacintoshInterfaceStyle;
+	NSMenuInterfaceStyle = NSMacintoshInterfaceStyle;
+    };
+    GSThemeIcon = "ThemeIcon.png";
+    GSThemePreview = "ThemePreview.png";
+    GSThemeLicense = GPLv3;
+    GSThemeTiles = {
+    };
+    GSThemeVersion = "0.1";
+}
