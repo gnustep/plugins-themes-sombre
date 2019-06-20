@@ -8,6 +8,7 @@
 	GSMenuBarHeight = 26;
 	GSMenuItemHeight = 26;
 	GSScrollerArrowsSameEnd = NO;
+	GSMenuSeparatorHeight = 5;
 	NSInterfaceStyleDefault = NSMacintoshInterfaceStyle;
 	NSMenuInterfaceStyle = NSMacintoshInterfaceStyle;
     };
