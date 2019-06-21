@@ -16,6 +16,44 @@
     GSThemePreview = "ThemePreview.png";
     GSThemeLicense = GPLv3;
     GSThemeTiles = {
+          GSMenuHorizontalItem = {
+	    FileName = "GSMenuHorizontalItem.png";
+	    NinePatch=YES;
+          };
+          GSMenuHorizontalItemHighlighted = {
+	    FileName = "GSMenuItemSelected.png";
+              NinePatch = YES;
+          };
+          GSMenuHorizontalItemSelected = {
+	    FileName = "GSMenuItemSelected.png";
+              NinePatch = YES;
+          };
+          GSMenuTitleBackground = {
+	    FileName = "MenuTitleBackground.9.png";
+          };
+	GSMenuVerticalBackground = {
+	    FileName = "GSMenuVerticalBackground.png";
+	};
+	GSMenuVerticalItem = {
+	    FileName = "GSMenuVerticalItem.png";
+	    NinePatch = YES;
+	};
+	GSMenuVerticalItemHighlighted = {
+	    FileName = "GSMenuItemSelected.png";
+              NinePatch = YES;
+	};
+	GSMenuVerticalItemSelected = {
+	    FileName = "GSMenuItemSelected.png";
+              NinePatch = YES;
+	};
+	GSMenuVerticalItemDisabled = {
+	    FileName = "GSMenuVerticalItem.png";
+              NinePatch = YES;
+	};
+	GSMenuSeparatorItem = {
+ 	    FileName = "GSMenuSeparatorItem.9.png";
+	    NinePatch = YES;
+	};
     };
     GSThemeVersion = "0.1";
 }
