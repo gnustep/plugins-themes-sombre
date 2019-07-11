@@ -7,30 +7,34 @@
 	GSBackHandlesWindowDecorations = YES;
 	GSMenuBarHeight = 26;
 	GSMenuItemHeight = 26;
-	GSScrollerArrowsSameEnd = NO;
 	GSMenuSeparatorHeight = 5;
+	GSScrollerArrowsSameEnd = NO;
 	NSInterfaceStyleDefault = NSMacintoshInterfaceStyle;
 	NSMenuInterfaceStyle = NSMacintoshInterfaceStyle;
     };
     GSThemeIcon = "ThemeIcon.png";
-    GSThemePreview = "ThemePreview.png";
     GSThemeLicense = GPLv3;
+    GSThemePreview = "ThemePreview.png";
     GSThemeTiles = {
-          GSMenuHorizontalItem = {
+	GSMenuHorizontalItem = {
 	    FileName = "GSMenuHorizontalItem.png";
-	    NinePatch=YES;
-          };
-          GSMenuHorizontalItemHighlighted = {
+	    NinePatch = YES;
+	};
+	GSMenuHorizontalItemHighlighted = {
 	    FileName = "GSMenuItemSelected.png";
-              NinePatch = YES;
-          };
-          GSMenuHorizontalItemSelected = {
+	    NinePatch = YES;
+	};
+	GSMenuHorizontalItemSelected = {
 	    FileName = "GSMenuItemSelected.png";
-              NinePatch = YES;
-          };
-          GSMenuTitleBackground = {
+	    NinePatch = YES;
+	};
+	GSMenuSeparatorItem = {
+	    FileName = "GSMenuSeparatorItem.9.png";
+	    NinePatch = YES;
+	};
+	GSMenuTitleBackground = {
 	    FileName = "MenuTitleBackground.9.png";
-          };
+	};
 	GSMenuVerticalBackground = {
 	    FileName = "GSMenuVerticalBackground.png";
 	};
@@ -38,20 +42,16 @@
 	    FileName = "GSMenuVerticalItem.png";
 	    NinePatch = YES;
 	};
+	GSMenuVerticalItemDisabled = {
+	    FileName = "GSMenuVerticalItem.png";
+	    NinePatch = YES;
+	};
 	GSMenuVerticalItemHighlighted = {
 	    FileName = "GSMenuItemSelected.png";
-              NinePatch = YES;
+	    NinePatch = YES;
 	};
 	GSMenuVerticalItemSelected = {
 	    FileName = "GSMenuItemSelected.png";
-              NinePatch = YES;
-	};
-	GSMenuVerticalItemDisabled = {
-	    FileName = "GSMenuVerticalItem.png";
-              NinePatch = YES;
-	};
-	GSMenuSeparatorItem = {
- 	    FileName = "GSMenuSeparatorItem.9.png";
 	    NinePatch = YES;
 	};
     };
