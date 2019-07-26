@@ -1,16 +1,18 @@
 Installation
 ------------
 
-Just compile the Rhea bundle: 
+Just compile the Sombre theme with : 
 
 	make
 
-Now you should have a Rhea.theme bundle. 
+Now you should have a Sombre.theme bundle. 
+
 Install it in ~/GNUStep/Library/Themes with 
 
  make install GNUSTEP_INSTALLATION_DOMAIN=USER
  
  or become root and  install it in the LOCAL domain with :
+ 
  make install
  
  
