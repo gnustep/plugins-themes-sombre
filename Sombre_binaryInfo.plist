@@ -10,7 +10,7 @@
 	GSMenuSeparatorHeight = 5;
 	GSScrollViewNoInnerBorder = YES;
 	GSScrollerButtonsOffset = 0;
-	GSScrollerDefaultWidth = "16.0";
+	GSScrollerDefaultWidth = "13.0";
 	GSScrollerKnobOvershoot = "1.0";
 	GSScrollerArrowsSameEnd = NO;
 	NSInterfaceStyleDefault = NSMacintoshInterfaceStyle;
