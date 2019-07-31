@@ -54,6 +54,12 @@
 	    FileName = "GSMenuItemSelected.png";
 	    NinePatch = YES;
 	};
+	GSScrollerHorizontalSlot = {
+	    FileName = "GSScrollerHorizontalSlot.9.png";
+	};
+	GSScrollerVerticalSlot = {
+	    FileName = "GSScrollerVerticalSlot.9.png";
+	};
     };
     GSThemeVersion = "0.1";
 }
