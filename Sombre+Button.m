@@ -2,41 +2,62 @@
 #import "Sombre+Button.h"
 @implementation Sombre(Button)
 
-void DrawRoundedRect(NSRect rect, CGFloat x, CGFloat y)
+void DrawRoundedRect(NSRect rect, CGFloat x, CGFloat y, NSColor *fillColor)
 
 {
-
     NSBezierPath* thePath = [NSBezierPath bezierPath];
-
- 
-
-    [thePath appendBezierPathWithRoundedRect:rect xRadius:x yRadius:y];
-
+    [thePath appendBezierPathWithRoundedRect:rect xRadius:x yRadius:y]; 
+    [thePath setLineWidth: 3.0];  
     [thePath stroke];
-    [thePath fill];
+    NSGradient * aGradient = [[NSGradient alloc] initWithColorsAndLocations:
+		    [fillColor highlightWithLevel: 0.3], (CGFloat) 0,
+		    [fillColor shadowWithLevel: 0.01], (CGFloat) 0.08,				 
+		    [fillColor shadowWithLevel: 0.1], (CGFloat) 0.92,
+		    [fillColor shadowWithLevel: 0.45], (CGFloat) 1.0,
+					    nil];
+    [aGradient drawInBezierPath: thePath
+			  angle: 90.0];
+    [aGradient release];
 
 }
 
 
 - (void) drawButton: (NSRect) frame 
-			     in: (NSCell*) cell 
-			   view: (NSView*) view 
-			  style: (int) style 
-			  state: (GSThemeControlState) state {
-	if (state == GSThemeNormalState)
-		[[[NSColor controlBackgroundColor] shadowWithLevel: 0.1] set];
-	else if (state == GSThemeHighlightedState || state == GSThemeHighlightedFirstResponderState) {
-		[[[NSColor selectedControlColor] shadowWithLevel: 0.1] set];
-		NSLog(@"Highlighted");
-		}	
-	else if (state == GSThemeSelectedState || state == GSThemeSelectedFirstResponderState) {
-		[[[NSColor selectedControlColor] shadowWithLevel: 0.1] set];
-		NSLog(@"Selected");
-		}
-	else 
-		[[NSColor controlBackgroundColor] set];
-		
-	DrawRoundedRect(frame,3,3);
+		 in: (NSCell*) cell 
+	       view: (NSView*) view 
+	      style: (int) style 
+	      state: (GSThemeControlState) state {
+
+  NSColor *fillColor = [NSColor controlBackgroundColor];
+  if (state == GSThemeNormalState)
+    {
+      [[[NSColor controlColor] shadowWithLevel: 0.45] setStroke];
+    }
+  else if (state == GSThemeHighlightedState)
+    {
+      fillColor = [NSColor controlHighlightColor];
+      [[[NSColor controlHighlightColor] shadowWithLevel: 0.45] setStroke];
+      NSLog(@"Highlighted");
+    }
+  else if (state == GSThemeHighlightedFirstResponderState)
+    {
+      fillColor = [NSColor selectedControlColor];  
+      [[[NSColor alternateSelectedControlColor] shadowWithLevel: 0.01] setStroke];
+      NSLog(@"Selected");
+
+    }
+  else if (state == GSThemeSelectedState || state == GSThemeSelectedFirstResponderState)
+    {    
+      fillColor = [NSColor selectedControlColor];  
+      [[[NSColor selectedControlColor] shadowWithLevel: 0.45] setStroke];
+      NSLog(@"Selected");
+    }
+  else
+    {
+      fillColor = [NSColor controlColor];
+      [[[NSColor controlColor] shadowWithLevel: 0.4] setStroke];
+    }				
+  DrawRoundedRect(frame,3,3, fillColor);
 }
 
 @end
