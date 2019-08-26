@@ -10,7 +10,12 @@ $(BUNDLE_NAME)_PRINCIPAL_CLASS = Sombre
 
 $(BUNDLE_NAME)_OBJC_FILES = \
 		Sombre.m \
-		Sombre+Button.m	
+		Sombre+Button.m \
+		SombreScrollerKnobSlotCell.m \
+		SombreScrollerKnobCell.m \
+		SombreScrollerArrowCell.m \
+		Sombre+Scroller.m
+
 
 $(BUNDLE_NAME)_RESOURCE_FILES = \
 	./Resources/ThemeIcon.png\

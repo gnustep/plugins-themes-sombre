@@ -1,5 +1,6 @@
 #import <AppKit/AppKit.h>
 #import "Sombre+Button.h"
+
 @implementation Sombre(Button)
 
 void DrawRoundedRect(NSRect rect, CGFloat x, CGFloat y, NSColor *fillColor)
@@ -27,8 +28,18 @@ void DrawRoundedRect(NSRect rect, CGFloat x, CGFloat y, NSColor *fillColor)
 	       view: (NSView*) view 
 	      style: (int) style 
 	      state: (GSThemeControlState) state {
+  NSColor *fillColor = [self buttonColorInCell: cell
+				      forState: state];			
+  DrawRoundedRect(frame,3,3, fillColor);
+}
+
+
+- (NSColor*) buttonColorInCell:(NSCell*) cell
+                      forState: (GSThemeControlState) state
+{
 
   NSColor *fillColor = [NSColor controlBackgroundColor];
+  //NSString	*name = [super nameForElement: cell];
   if (state == GSThemeNormalState)
     {
       [[[NSColor controlColor] shadowWithLevel: 0.45] setStroke];
@@ -37,27 +48,36 @@ void DrawRoundedRect(NSRect rect, CGFloat x, CGFloat y, NSColor *fillColor)
     {
       fillColor = [NSColor controlHighlightColor];
       [[[NSColor controlHighlightColor] shadowWithLevel: 0.45] setStroke];
-      NSLog(@"Highlighted");
     }
   else if (state == GSThemeHighlightedFirstResponderState)
     {
       fillColor = [NSColor selectedControlColor];  
-      [[[NSColor alternateSelectedControlColor] shadowWithLevel: 0.01] setStroke];
-      NSLog(@"Selected");
-
+      [[[NSColor alternateSelectedControlColor] shadowWithLevel: 0.01] setStroke];   
     }
   else if (state == GSThemeSelectedState || state == GSThemeSelectedFirstResponderState)
     {    
       fillColor = [NSColor selectedControlColor];  
       [[[NSColor selectedControlColor] shadowWithLevel: 0.45] setStroke];
-      NSLog(@"Selected");
     }
   else
     {
       fillColor = [NSColor controlColor];
       [[[NSColor controlColor] shadowWithLevel: 0.4] setStroke];
-    }				
-  DrawRoundedRect(frame,3,3, fillColor);
+    }
+return fillColor;
+}
+
+- (void) drawPathButton: (NSBezierPath*) path
+                     in: (NSCell*)cell
+			            state: (GSThemeControlState) state
+{
+  NSColor  *backgroundColor = [self buttonColorInCell: cell forState: state];
+  NSColor  *strokeColorButton = [backgroundColor shadowWithLevel: 0.45];
+  /*NSGradient  *buttonBackgroundGradient = [self _bezelGradientWithColor: backgroundColor];
+    [buttonBackgroundGradient drawInBezierPath: path angle: -90];*/
+  [strokeColorButton setStroke];
+  [path setLineWidth: 1];
+  [path stroke];
 }
 
 @end
