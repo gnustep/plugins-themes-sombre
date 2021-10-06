@@ -1,7 +1,7 @@
 include $(GNUSTEP_MAKEFILES)/common.make
 
-PACKAGE_NAME = Sombre_binary
-BUNDLE_NAME = Sombre_binary
+PACKAGE_NAME = Sombre
+BUNDLE_NAME = Sombre
 BUNDLE_EXTENSION = .theme
 VERSION = 0.1
 
