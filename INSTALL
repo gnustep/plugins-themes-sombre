@@ -1,0 +1,37 @@
+Installation
+------------
+
+Just compile the Sombre theme with : 
+
+	make
+
+Now you should have a Sombre.theme bundle. 
+
+Install it in ~/GNUStep/Library/Themes with 
+
+ make install GNUSTEP_INSTALLATION_DOMAIN=USER
+ 
+ or become root and  install it in the LOCAL domain with :
+ 
+ make install
+ 
+ 
+
+After that, you need to tell GNUstep to use the 
+theme bundle: 
+
+  defaults write NSGlobalDomain GSTheme Sombre
+  
+
+The theme uses NSMacintoshInterfaceStyle (global menubar) by defaults.
+The menubar is transparent (if used with a compositing manager as compton) because I wrote Sombre to be used with a persistent menubar at the top the screen : TopBar (gnustep menus disappear when no gnustep app has the focus, but TopBar will stay). You can find TopBar at : https://github.com/BertrandDekoninck/TopBar.
+
+If you don't want to use macmenus, ou can force the use of Next menus with :
+
+defaults write NSGlobalDomain NSMenuInterfaceStyle NSNextStepInterfaceStyle
+
+Or you can force the use of inwindow menus with :
+
+defaults write NSGlobalDomain NSMenuInterfaceStyle NSWindows95InterfaceStyle
+
+

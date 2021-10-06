@@ -2,4 +2,6 @@
 .gwdir
 *.swp
 .vimrc
+Sombre_binary.theme
+obj
 tags
